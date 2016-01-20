@@ -1,3 +1,5 @@
+import javafx.beans.property.SimpleStringProperty;
+
 public class Flight {
     Plane plane;
     Airport origin, destination;

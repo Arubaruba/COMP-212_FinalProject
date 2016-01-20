@@ -61,7 +61,9 @@
                                             </HBox.margin>
                                         </Label>
                                         <ComboBox fx:id="planeActionsFlightComboBox" prefWidth="150.0" />
-                                        <Button mnemonicParsing="false" text="Land" />
+                              <Button mnemonicParsing="false" onAction="#planeTakeoff" text="Takeoff" />
+                              <Button mnemonicParsing="false" onAction="#planeRequestLanding" text="Request to Land" />
+                                        <Button mnemonicParsing="false" onAction="#planeLand" text="Land" />
                                     </children>
                                     <padding>
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
@@ -119,11 +121,12 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <TableView layoutX="-13.0" prefHeight="252.0" prefWidth="701.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <TableView fx:id="incomingFlightsTableView" layoutX="-13.0" prefHeight="252.0" prefWidth="701.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <columns>
-                                        <TableColumn prefWidth="75.0" text="Flight #" />
-                                        <TableColumn prefWidth="115.0" text="Passengers" />
-                              <TableColumn minWidth="5.0" prefWidth="130.0" text="From" />
+                                        <TableColumn fx:id="incomingFlightNumber" prefWidth="75.0" text="Flight #" />
+                              <TableColumn fx:id="incomingFlightStatus" prefWidth="94.0" text="Status" />
+                                        <TableColumn fx:id="incomingFlightPassengers" prefWidth="115.0" text="Passengers" />
+                              <TableColumn fx:id="incomingFlightFrom" minWidth="5.0" prefWidth="130.0" text="From" />
                                     </columns>
                                 </TableView>
                             </children>

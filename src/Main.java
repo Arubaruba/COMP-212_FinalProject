@@ -19,9 +19,6 @@ public class Main extends Application {
         primaryStage.setTitle("Andreas Stocker Airport System");
         primaryStage.setScene(new Scene(root, 800, 575));
         primaryStage.show();
-
-
-//        airportsComboBox.setItems();
     }
 
 
